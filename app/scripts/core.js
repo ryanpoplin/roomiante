@@ -7,15 +7,13 @@
 var spa = (function ($) {
 
 	var configMap = {
-		extendedHeight: 434,
+		extendedHeight: 500,
 		extendedTitle: 'Click here...',
 		retractedHeight: 16,
 		retractedTitle: 'Click here...',
 		templateHtml: '<div class="spa-slider"><\/div>'
 	},
-	// Remaining vars...
 	$chatSlider, toggleSlider, onClickSlider, initModule;
-	// DOM Time...
 	toggleSlider = function () {
 		var sliderHeight = $chatSlider.height();
 		if (sliderHeight === configMap.retractedHeight) {
@@ -235,8 +233,6 @@ $(function () {
 	});
 
 	// User Testing...
-
-
 
 	// Company View...
 	Roominate.Views.Company = Backbone.View.extend({
