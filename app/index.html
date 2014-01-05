@@ -1,0 +1,135 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>fullstackjs</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- SPA -->
+        
+        <div id="roominate">
+
+        </div>
+
+        <!-- Templates -->
+
+        <script type="text/template" id="spa-template">
+            <div class="spa-slider">
+
+            </div>
+        </script>
+
+        <script type="text/template" id="index-template">
+            <header class="index-header">
+                <div class="content-container">
+                    <a href="#/"><h1>Roominate</h1></a>
+                    <nav>   
+                        <ul>
+                            <a href="#signUp"><li>Sign Up</li></a>
+                            <a href="#testing"><li>Sign In</li></a>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <section class="index-section">
+                <div class="content-container">
+                    <h2>Just an open-source conference room booking app.</h2>
+                    <a href="#/signUp">
+                        <div class="add-join-btn">
+                            <p>Sign Up</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <footer class="index-footer">
+                <div class="content-container">
+                    <p>The Iron Yard Development Team</p>
+                </div>
+            </footer>
+        </script>
+
+        <script type="text/template" id="sign-up-template">
+            <header class="index-header">
+                <div class="content-container">
+                    <a href="#/"><h1>Roominate</h1></a>
+                    <nav>
+                    <a href="#/">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="32px" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"><g id="Layer_1"/><g id="x_x5F_alt"><path d="M16,0C7.164,0,0,7.164,0,16s7.164,16,16,16s16-7.164,16-16S24.836,0,16,0z M23.914,21.086   l-2.828,2.828L16,18.828l-5.086,5.086l-2.828-2.828L13.172,16l-5.086-5.086l2.828-2.828L16,13.172l5.086-5.086l2.828,2.828   L18.828,16L23.914,21.086z" style="fill:#4E4E50;"/></g></svg>
+                    </a>
+                    </nav>
+                </div>
+            </header>
+            <section class="index-section">
+                <div class="content-container">
+                    <h2>Sign Up and Invite Your Team Members...</h2>
+                    <form id="sign-up-form" action="#">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <br>
+                        <input type="submit">
+                    </form>
+                </div>
+            </section>
+            <footer class="index-footer">
+                <div class="content-container">
+                    <p>The Iron Yard Development Team</p>
+                </div>
+            </footer>
+        </script>
+
+        <script type="text/template" id="company-template">
+            <p>asdfjkl;</p>
+        </script>
+
+        <!--<script type="text/template" id="admin-profile-template">
+            <p>asdfjkl;</p>
+        </script>
+
+        <script type="text/template" id="user-profile-template"></script>-->
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.min.js"></script>
+        <script src="bower_components/underscore/underscore-min.js"></script>
+        <script src="bower_components/backbone/backbone-min.js"></script>
+        <script src="bower_components/backbone.mutators/backbone.mutators.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/core.js"></script>
+        <!--<script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>-->
+        <!-- endbuild -->
+</body>
+</html>

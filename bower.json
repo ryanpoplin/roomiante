@@ -1,0 +1,14 @@
+{
+  "name": "fullstackjs",
+  "version": "0.0.0",
+  "dependencies": {
+    "sass-bootstrap": "~3.0.0",
+    "requirejs": "~2.1.8",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2",
+    "underscore": "~1.5.2",
+    "backbone": "~1.1.0",
+    "backbone.mutators": "~0.4.0"
+  },
+  "devDependencies": {}
+}
