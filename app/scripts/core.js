@@ -7,34 +7,41 @@
 var spa = (function ($) {
 
 	var configMap = {
-		extendedHeight: 500,
-		extendedTitle: 'Click here...',
-		retractedHeight: 16,
-		retractedTitle: 'Click here...',
-		templateHtml: '<div class="spa-slider"><\/div>'
+		extendedHeight	: 500,
+		extendedTitle	: 'Click here...',
+		retractedHeight	: 16,
+		retractedTitle	: 'Click here...',
+		templateTest	: _.template($('#spa-slider-template').html())	
 	},
 	$chatSlider, toggleSlider, onClickSlider, initModule;
 	toggleSlider = function () {
 		var sliderHeight = $chatSlider.height();
+		console.log(sliderHeight); // ?...
 		if (sliderHeight === configMap.retractedHeight) {
 			$chatSlider.animate({
 				height: configMap.extendedHeight
 			}).attr('title', configMap.extendedTitle);
+			// 
 			return true;
+			//
 		} else if (sliderHeight === configMap.extendedHeight) {
 			$chatSlider.animate({
 				height: configMap.retractedHeight
 			}).attr('title', configMap.retractedTitle);
+			//
 			return true;
+			//
 		}
+		//
 		return false;
+		//
 	};
 	onClickSlider = function (event) {
 		toggleSlider();
 		return false;
 	};
 	initModule = function ($container) {
-		$container.html(configMap.templateHtml);
+		$container.html(configMap.templateTest);
 		$chatSlider = $container.find('.spa-slider');
 		$chatSlider.attr('title', configMap.retractedTitle).click(onClickSlider);
 		return true;
@@ -73,21 +80,6 @@ $(function () {
 		Router: null
 	};
 
-	// Testing Application Views...
-
-	Roominate.Views.SPA = Backbone.View.extend({
-		tagName: 'div',
-		template: _.template($('#spa-template').html()),
-		initialize: function () {
-			console.log('SPA View is ready...');
-			this.el = $('#roominate');
-		},
-		render: function () {
-			this.el.html(this.template());
-			return this;
-		}
-	});
-
 	// Core Application Views...
 
 	// Index View...
@@ -98,7 +90,6 @@ $(function () {
 
 		}*/
 		initialize: function () {
-			console.log('"Index" view was init...');
 			this.el = $('#roominate');
 		},
 		render: function () {
@@ -115,7 +106,6 @@ $(function () {
 
 		}*/
 		initialize: function () {
-			console.log('"Sign Up Template" view was init...');
 			this.$el = $('#roominate');
 		},
 		render: function () {
@@ -142,7 +132,7 @@ $(function () {
 			// Config login info...
 		},
 		initialize: function () {
-			console.log('"CompanyFeaturesUtility" was init...');
+		
 		}
 	});
 
@@ -182,11 +172,9 @@ $(function () {
 			}
 		},*/
 		initialize: function () {
-			console.log('The "Company" model has been init...');
     		this.set('info', new Roominate.Models.CompanyFeaturesUtility());
 			// In general...
 			this.on('change', function () {
-        		console.log('Values for this model have changed...');
     		});
     		if (!this.has('date')) {
     			var date = new Date();
@@ -214,19 +202,13 @@ $(function () {
 	// Company Testing...
 
 	// Log Testing for theIronYardModel...
-	console.log(theIronYardModel);
 	var name = theIronYardModel.get('name');
-	console.log(name);
 	var info = theIronYardModel.get('info');
 	var rooms = info.get('rooms');
-	console.log(rooms);
 	var companyId = theIronYardModel.get('idAttribute');
-	console.log(companyId);
 	var companyName = theIronYardModel.get('companyName');
-	console.log(companyName);
 	// Just a testing clone for theIronYardModel...
 	var theIronYardModelClone = theIronYardModel.clone();
-	console.log(theIronYardModelClone);
 	theIronYardModelClone.get('info').set({
 		hours: 'Times...',
 		rooms: 234234234
@@ -243,7 +225,6 @@ $(function () {
 
 		}*/
 		initialize: function () {
-			console.log('"Company" view was init...');
 			this.$el = $('#roominate');
 		},
 		render: function () {
@@ -263,7 +244,6 @@ $(function () {
 			// Add more if needed...
 		},
 		initialize: function () {
-			console.log('"RoomFeaturesUtility" model was init...');
 		}
 	});
 
@@ -278,7 +258,6 @@ $(function () {
 			}
 		},
 		initialize: function () {
-			console.log('"Room" model was init...');
 			this.set('features', new Roominate.Models.RoomFeaturesUtility());
 		}
 	});
